@@ -17,10 +17,13 @@ const getData = async () => {
 
 const CategoryList = async () => {
   const data = await getData();
+
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
+
         {data?.map((item) => (
           <Link
             href="/blog?cat=style"
@@ -28,6 +31,7 @@ const CategoryList = async () => {
             key={item._id}
           >
             {item.img && (
+
               <Image
                 src={item.img}
                 alt=""
@@ -35,10 +39,14 @@ const CategoryList = async () => {
                 height={32}
                 className={styles.image}
               />
-            )}
+            )
+            
+            }
             {item.title}
           </Link>
-        ))}
+        )
+        
+        )}
       </div>
     </div>
   );

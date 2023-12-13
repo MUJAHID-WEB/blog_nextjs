@@ -16,19 +16,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         
-      {/* <AuthProvider>
+      <AuthProvider>
           <ThemeContextProvider>
-            <ThemeProvider> */}
+            <ThemeProvider>
               <div className="container">
                 <div className="wrapper">
-                  {/* <Navbar /> */}
+                  <Navbar />
                   {children}
-                  {/* <Footer /> */}
+                  <Footer />
                 </div>
               </div>
-            {/* </ThemeProvider>
+            </ThemeProvider>
           </ThemeContextProvider>
-        </AuthProvider> */}
+        </AuthProvider>
       
       </body>
     </html>
